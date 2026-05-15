@@ -1,0 +1,377 @@
+:root {
+  --bg: #080b12;
+  --panel: #111827;
+  --panel-soft: #172034;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --accent-strong: #0ea5e9;
+  --line: #243046;
+  --white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
+  background: radial-gradient(circle at 10% 0%, #13203a 0%, var(--bg) 42%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgb(8 11 18 / 88%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgb(255 255 255 / 5%);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+}
+
+.brand-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  box-shadow: 0 0 18px rgb(56 189 248 / 60%);
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.4rem;
+}
+
+.kicker {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  line-height: 1.12;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.lead {
+  margin: 0;
+  color: #ced4dd;
+  max-width: 62ch;
+}
+
+.hero-actions {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.hero-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgb(17 24 39 / 92%), rgb(17 24 39 / 65%));
+  border-radius: 16px;
+  padding: 1.1rem 1rem;
+}
+
+.hero-card h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.05rem;
+}
+
+.hero-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #d3d8e0;
+}
+
+.hero-card li + li {
+  margin-top: 0.5rem;
+}
+
+.section {
+  padding: 3.6rem 0;
+}
+
+.section h2 {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+}
+
+.section-intro {
+  margin: 0 0 1.2rem;
+  color: #c8d0db;
+  max-width: 68ch;
+}
+
+.alt {
+  background: rgb(255 255 255 / 2%);
+  border-top: 1px solid rgb(255 255 255 / 5%);
+  border-bottom: 1px solid rgb(255 255 255 / 5%);
+}
+
+.cards {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.cards.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cards.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.04rem;
+}
+
+.card p {
+  margin: 0;
+  color: #d3dae3;
+}
+
+.timeline {
+  list-style: none;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #2b354a;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-step {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #041021;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  box-shadow: 0 6px 18px rgb(56 189 248 / 28%);
+  z-index: 1;
+}
+
+.timeline-content {
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.03rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #d3dae3;
+}
+
+.join-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.join-highlight {
+  margin: 0.8rem 0 0.6rem;
+  color: #dbe7f4;
+  font-weight: 600;
+}
+
+.join-benefits {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #c8d6e6;
+}
+
+.join-benefits li + li {
+  margin-top: 0.35rem;
+}
+
+.join-form {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  background: var(--panel);
+}
+
+.join-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.join-form input[type="email"] {
+  width: 100%;
+  padding: 0.8rem 0.82rem;
+  background: #0d1423;
+  border: 1px solid #2b354a;
+  color: var(--white);
+  border-radius: 10px;
+  outline: none;
+}
+
+.join-form input[type="email"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgb(56 189 248 / 20%);
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+.form-note {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0.64rem 0.95rem;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #041021;
+  box-shadow: 0 8px 28px rgb(56 189 248 / 25%);
+}
+
+.btn-secondary {
+  border-color: #2b354a;
+  background: #111827;
+  color: #d8dee8;
+}
+
+.btn-ghost {
+  border-color: #334155;
+  color: #d4d9e2;
+}
+
+.site-footer {
+  border-top: 1px solid rgb(255 255 255 / 5%);
+  padding: 1.1rem 0 1.4rem;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  color: #a6afbc;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .join-wrap,
+  .cards.three {
+    grid-template-columns: 1fr;
+  }
+
+  .cards.two {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 19px;
+  }
+}

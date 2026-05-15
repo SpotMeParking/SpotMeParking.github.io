@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SpotMe ti aiuta a trovare il parcheggio giusto in citta sconosciute con percorsi ottimizzati e una community di spotter."
+    />
+    <title>SpotMe | Parcheggio intelligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Homepage SpotMe">
+          <img src="./assets/logo_dark_2.png" alt="">
+        </a>
+        <a class="btn btn-secondary" href="#join-list">Unisciti alla waitlist</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="kicker">Parcheggio senza stress</p>
+            <h1>Trova il posto perfetto in qualsiasi citta.</h1>
+            <p class="lead">
+              SpotMe e il tuo assistente quando cerchi parcheggio in una citta
+              che non conosci. Crea un percorso ottimizzato e ti guida verso lo
+              stallo migliore in base alle tue preferenze: gratuito, a
+              pagamento, e altro.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#join-list">Entra in waitlist</a>
+              <a class="btn btn-ghost" href="#how-it-works">Come funziona</a>
+            </div>
+          </div>
+      </section>
+
+      <section id="how-it-works" class="section">
+        <div class="container">
+          <p class="kicker">Funzione chiave</p>
+          <h2>Come funziona</h2>
+          <p class="section-intro">
+            Dalla scelta del parcheggio al contributo della community: lo
+            Spotter e il motore umano che mantiene SpotMe vivo e preciso nel
+            traffico reale.
+          </p>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-step">1</div>
+              <div class="timeline-content">
+                <h3>Imposta le preferenze</h3>
+                <p>
+                  Scegli il tipo di parcheggio che preferisci: gratuito, a
+                  pagamento o misto.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-step">2</div>
+              <div class="timeline-content">
+                <h3>Ricevi il percorso ottimizzato</h3>
+                <p>
+                  SpotMe genera il tragitto migliore per aumentare le
+                  probabilita di trovare posto velocemente.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-step">3</div>
+              <div class="timeline-content">
+                <h3>Arriva e parcheggia</h3>
+                <p>
+                  Quando arrivi, SpotMe scala i crediti dal wallet. Se lo stallo
+                  è a pagamento, gestisce la transazione senza bisogno di aprire altre applicazioni.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-step">4</div>
+              <div class="timeline-content">
+                <h3>Diventa Spotter: segnala, valida, migliora</h3>
+                <p>
+                  Non sei un utente passivo: segnali parcheggi liberi nella tua
+                  zona e aggiorni la mappa in tempo reale. Ogni contributo
+                  è ricompensato da crediti e riduce lo stress della ricerca a vuoto per tutta la <span lang="en">community</span>.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="join-list" class="section join">
+        <div class="container join-wrap">
+          <div style="text-align: center;">
+            <h2>Entra nella waitlist di SpotMe</h2>
+            <p>
+              Lascia la tua email per sapere quando smetterai di girare a vuoto e inizierai a parcheggiare.
+            </p>
+          </div>
+
+          <form
+            class="join-form"
+            name="spotme-join-list"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thank-you.html"
+          >
+            <input type="hidden" name="form-name" value="spotme-join-list" />
+            <p class="hidden">
+              <label>Non compilare questo campo: <input name="bot-field" /></label>
+            </p>
+
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Inserisci la tue email..."
+                required
+                autocomplete="email"
+              />
+  
+              <button type="submit" class="btn btn-primary">
+                Unisciti
+              </button>
+            </div>
+            <p class="form-note">
+              Niente spam: ti scriveremo solo quando il servizio sarà disponibile.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>&copy; <span id="year"></span> SpotMe. Tutti i diritti riservati.</p>
+        <a href="#top">Torna su</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
