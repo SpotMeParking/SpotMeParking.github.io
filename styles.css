@@ -310,6 +310,8 @@ h1 {
   padding-bottom: 0.4rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  margin-inline: 3rem;
 }
 
 .reviews-track::-webkit-scrollbar {
@@ -631,7 +633,8 @@ h1 {
   }
 
   .reviews-track {
-    grid-auto-columns: 85%;
+    grid-auto-columns: 100%;
+    margin-inline: 4rem;
   }
 
   .carousel-prev {
