@@ -531,13 +531,6 @@ h1 {
   margin-top: 0.35rem;
 }
 
-.join-form {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 1rem;
-  background: var(--panel);
-}
-
 .join-form label {
   display: block;
   margin-bottom: 0.4rem;
