@@ -114,26 +114,287 @@ h1 {
   gap: 0.65rem;
 }
 
-.hero-card {
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgb(17 24 39 / 92%), rgb(17 24 39 / 65%));
+.btn-store {
+  gap: 0.6rem;
+  padding: 0.55rem 1.1rem;
+  text-align: left;
+}
+
+.store-icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+.store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.store-text small {
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+}
+
+.store-text strong {
+  font-size: 1.02rem;
+}
+
+.hero-rating {
+  margin-top: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.hero-rating-text strong {
+  color: var(--text);
+}
+
+.stars {
+  color: #fbbf24;
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+}
+
+.star-empty {
+  color: #4b5563;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  position: relative;
+  width: 240px;
+  height: 480px;
+  border-radius: 34px;
+  padding: 12px;
+  background: linear-gradient(160deg, #1f2a40, #0c121f);
+  border: 1px solid #2b354a;
+  box-shadow:
+    0 30px 60px rgb(0 0 0 / 45%),
+    inset 0 0 0 2px rgb(255 255 255 / 4%);
+}
+
+.phone-notch {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 18px;
+  border-radius: 999px;
+  background: #060a12;
+  z-index: 2;
+}
+
+.phone-screen {
+  height: 100%;
+  border-radius: 24px;
+  background: radial-gradient(circle at 30% 0%, #15233f, #0a0f1b 70%);
+  padding: 1.4rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.phone-kicker {
+  margin: 0.4rem 0 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.phone-map {
+  position: relative;
+  flex: 1;
   border-radius: 16px;
-  padding: 1.1rem 1rem;
+  background:
+    linear-gradient(rgb(56 189 248 / 6%) 1px, transparent 1px) 0 0 / 100% 26px,
+    linear-gradient(90deg, rgb(56 189 248 / 6%) 1px, transparent 1px) 0 0 / 26px 100%,
+    #0c1422;
+  border: 1px solid #1c2740;
+  overflow: hidden;
 }
 
-.hero-card h2 {
-  margin: 0 0 0.7rem;
-  font-size: 1.05rem;
+.pin {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgb(56 189 248 / 20%);
 }
 
-.hero-card ul {
+.pin-1 { top: 22%; left: 26%; }
+.pin-2 { top: 54%; left: 60%; background: #fbbf24; box-shadow: 0 0 0 4px rgb(251 191 36 / 20%); }
+.pin-3 { top: 78%; left: 36%; background: #34d399; box-shadow: 0 0 0 4px rgb(52 211 153 / 20%); }
+
+.route {
+  position: absolute;
+  top: 26%;
+  left: 28%;
+  width: 36%;
+  height: 50%;
+  border-left: 3px dashed var(--accent);
+  border-bottom: 3px dashed var(--accent);
+  border-radius: 0 0 0 14px;
+  opacity: 0.7;
+}
+
+.phone-spot,
+.phone-credits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  padding: 0.65rem 0.8rem;
+}
+
+.phone-spot strong,
+.phone-credits strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.phone-spot small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.phone-spot-badge {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #041021;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+}
+
+.phone-credits span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.phone-credits strong {
+  color: #34d399;
+}
+
+.reviews-carousel {
+  position: relative;
+  margin-top: 1.4rem;
+}
+
+.reviews-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * 0.95rem) / 3);
+  gap: 0.95rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 0.4rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  margin-inline: 3rem;
+}
+
+.reviews-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
   margin: 0;
-  padding-left: 1.2rem;
-  color: #d3d8e0;
+  scroll-snap-align: start;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  border-radius: 14px;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
-.hero-card li + li {
-  margin-top: 0.5rem;
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgb(17 24 39 / 92%);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--panel-soft);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-prev {
+  left: -14px;
+}
+
+.carousel-next {
+  right: -14px;
+}
+
+.review-card blockquote {
+  margin: 0;
+  color: #dbe1ea;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #041021;
+  background: var(--a, #38bdf8);
+}
+
+.review-author strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.review-author small {
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 .section {
@@ -270,13 +531,6 @@ h1 {
   margin-top: 0.35rem;
 }
 
-.join-form {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 1rem;
-  background: var(--panel);
-}
-
 .join-form label {
   display: block;
   margin-bottom: 0.4rem;
@@ -369,6 +623,24 @@ h1 {
 
   .cards.two {
     grid-template-columns: 1fr;
+  }
+
+  .reviews-track {
+    grid-auto-columns: 100%;
+    margin-inline: 4rem;
+  }
+
+  .carousel-prev {
+    left: 2px;
+  }
+
+  .carousel-next {
+    right: 2px;
+  }
+
+  .hero-visual {
+    order: -1;
+    margin-bottom: 0.5rem;
   }
 
   .timeline::before {
